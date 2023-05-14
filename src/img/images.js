@@ -1,0 +1,13 @@
+export { default as Logo } from "./Logo.svg";
+export { default as main } from "./main.png";
+export { default as company } from "./company.png";
+export { default as target } from "./target.svg";
+export { default as dimond } from "./dimond.svg";
+export { default as montain } from "./montain.svg";
+export { default as excavator } from "./excavator.svg";
+export { default as equipment } from "./equipment.png";
+export { default as dismantling } from "./dismantling.png";
+export { default as explosion } from "./explosion.png";
+export { default as reviews } from "./reviews.png";
+export { default as tel } from "./tel.svg";
+export { default as address } from "./address.svg";
