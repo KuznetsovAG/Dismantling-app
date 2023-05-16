@@ -466,7 +466,7 @@ body {
 .reviews {
   width: 100%;
   padding: 117px 0px 98px 0px;
-  background-color: #313131;
+  background: url(./img/reviews.png) no-repeat;
 }
 
 
@@ -511,16 +511,13 @@ body {
 }
 
 .reviews__customer {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   gap: 20px;
-  position: relative;
 }
 
+
 .customer__card {
-  width: 357px;
-  padding: 40px 35px;
+  width: 100%;
+  padding: 40px 85px;
   background: #797575;
   border-radius: 10px;
 }
@@ -556,7 +553,7 @@ body {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 28px;
   color: #F5F5F5;
 }
@@ -694,8 +691,11 @@ body {
   .company__title, .service__header-text, .reviews__header-text {
     font-size: 36px;
   }
-  .service__card, .customer__card {
+  .service__card {
     width: 317px;
+  }
+  .customer__card {
+    padding: 40px 55px;
   }
   .service__card-title {
     font-size: 18px;
@@ -755,14 +755,30 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .company {
+    padding: 70px 0px;
+  }
   .company__title {
     font-size: 26px;
   }
   .company__description {
     font-size: 14px;
   }
-  .service__card, .customer__card {
-    width: 380px;
+  .service {
+    padding: 70px 0px 30px 0px;
+  }
+  .service__card {
+    width: 300px;
+  }
+  .company__brands {
+    justify-content: start;
+  }
+  .brands__card {
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
   .service__card-text {
     font-weight: 400;
@@ -826,9 +842,6 @@ body {
     font-size: 26px;
     width: 100%;
   }
-  .customer__card {
-    width: 100%;
-  }
   .contacts__title {
     font-size: 25px;
     margin-bottom: 10px;
@@ -855,6 +868,9 @@ body {
   }
   .service__card-text {
     margin-bottom: 0px;
+  }
+  .customer__card {
+    padding: 40px 30px;
   }
 }
 

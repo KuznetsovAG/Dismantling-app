@@ -1,9 +1,18 @@
 import React, { useState } from "react";
 import { peopleReviews } from "../api/peopleReviews";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Reviews = () => {
   const [people] = useState(peopleReviews);
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div className="reviews">
       <div className="reviews__container _container">
@@ -19,17 +28,21 @@ const Reviews = () => {
           </p>
         </div>
         <div className="reviews__customer customer">
-          {people.map((reviews) => (
-            <div key={reviews.id} className="customer__card">
-              <div className="customer__header">
-                <div className="customer__logo">
-                  <img src={reviews.image} alt="" />
+          <Slider {...settings}>
+            {people.map((reviews) => (
+              <div key={reviews.id}>
+                <div className="customer__card">
+                  <div className="customer__header">
+                    <div className="customer__logo">
+                      <img src={reviews.image} alt="" />
+                    </div>
+                    <p className="customer__name">{reviews.name}</p>
+                  </div>
+                  <div className="customer__text">{reviews.message}</div>
                 </div>
-                <p className="customer__name">{reviews.name}</p>
               </div>
-              <div className="customer__text">{reviews.message}</div>
-            </div>
-          ))}
+            ))}
+          </Slider>
         </div>
       </div>
     </div>
