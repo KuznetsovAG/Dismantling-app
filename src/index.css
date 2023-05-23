@@ -238,6 +238,7 @@ body {
 .form__agreement {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .agreement__input {
@@ -255,15 +256,26 @@ body {
   top: 0px;
   left: 14px;
 }
+.error__message-checkbox {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  color: #e22828;
+  position: absolute;
+  bottom: -5px;
+  left: 20px;
+}
 
 .agreement__text {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 10px;
   line-height: 16px;
   color: #1C1C1C;
   width: 100%;
+  padding: 5px 0px;
 }
 
 .agreement__text span {
@@ -968,7 +980,7 @@ body {
     padding: 30px 0px;
   }
 
-  .error__message {
+  .error__message, .error__message-checkbox {
     font-size: 8px;
     left: 10px;
   }
